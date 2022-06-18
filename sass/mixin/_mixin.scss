@@ -1,0 +1,30 @@
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+// media query
+@mixin mobile {
+    @media (max-width: 375px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width:376px) and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 769px) and (max-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin larger {
+    @media (min-width: 1440px) {
+        @content;
+    }
+}

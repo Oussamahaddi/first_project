@@ -1,0 +1,141 @@
+
+//import all elements
+@import "./mixin/mixin",
+        "./variables/variables",
+        "./mixin/media-query",
+        "./font/family",
+        "./font/size";
+
+
+
+* {
+    font-family: $fontFamily;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+%flex {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    cursor: pointer;
+}
+
+header {
+    @extend %flex;
+    justify-content: space-between;
+    padding: $paraSize;
+    margin: auto;
+    position: relative;
+    background-color: $white;
+    .nav-logo {
+        @extend %flex;
+        #logo {
+            margin-left: 15px;
+        }
+    }
+    .about {
+        @extend %flex;
+        #avatar {
+            max-width: 30px;
+            margin-left: 15px;
+        }
+    }
+}
+
+
+@include mobile {
+    .blured {
+        font-weight: $fontBold;
+        display: none;
+        background-color: rgba(#000000, .5);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        .list {
+            background-color: white;
+            width: 70%;
+            height: 100vh;
+            position: absolute;
+            #close-icon {
+                margin: {
+                    top: 30px;
+                    left: 20px;
+                };
+            }
+            ul {
+                margin-top: 20%;
+                list-style: none;
+                li {
+                    padding: 20px;
+                    a {
+                        text-decoration: none;
+                        color: black;
+                    }
+                    &:hover {
+                        background-color: $grayishBlue;
+                        a {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #inside-cart {
+        font-weight: $fontBold;
+        background-color: white;
+        max-width: 100%;
+        height: 200px;
+        margin: 10px;
+        border-radius: 5px;
+        display: none;
+        flex-direction: column;
+        span {
+            display: block;
+            margin: 15px;
+        }
+        .items {
+            margin: auto;
+            color: $darkGrayishBlue;
+        }
+    }
+}
+
+@include tablet {
+    .list {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 70%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        ul {
+            margin: 15% 0;
+            list-style: none;
+            li {
+                padding: 20px;
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+                &:hover {
+                    
+                    background-color: $mainColor;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+
+
+
