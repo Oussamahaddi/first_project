@@ -8,7 +8,7 @@ let navBar = document.querySelector("#nav-bar");
     ul = document.querySelector(".blured");
     body = document.body;
     closeBtn = document.querySelector("#close-icon");
-    insideCart = document.querySelector("#inside-cart")
+    cartBox = document.querySelector("#cart-box")
 
 // show and hide nav bar
 
@@ -20,17 +20,16 @@ closeBtn.addEventListener("click", _ => {
     ul.style.display = "none";
 });
 
+// show and hide cart box
 
-// show and hide cart items 
-
-function items() {
-    if (insideCart.style.display == "none") {
-        insideCart.style.display = "flex"
+function show() {
+    if (cartBox.style.display == "none") {
+        cartBox.style.display = "block"
     } else {
-        insideCart.style.display = "none"
+        cartBox.style.display = "none"
     }
 }
 
-cart.onclick = items;
+cart.addEventListener("click", show)
 
 
