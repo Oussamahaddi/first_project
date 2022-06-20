@@ -10,65 +10,88 @@
 <body>
     
     <!-- header -->
-    <header>
-        <div class="nav-logo">
-            <img id="nav-bar" src="./sass/images/icon-menu.svg" alt="erreur">
-            <img id="logo" src="./sass/images/logo.svg" alt="erreur">
-        </div>
-        <div class="about">
-            <img id="cart" src="./sass/images/icon-cart.svg" alt="erreur">
-            <img id="avatar" src="./sass/images/image-avatar.png" alt="erreur">
+    <div class="container">
+        <header>
+            <div class="nav-logo">
+                <img id="nav-bar" src="./sass/images/icon-menu.svg" alt="erreur">
+                <a href="#"><img id="logo" src="./sass/images/logo.svg" alt="erreur"></a>
+            </div>
+            <div class="about">
+                <img id="cart" src="./sass/images/icon-cart.svg" alt="erreur">
+                <img id="avatar" src="./sass/images/image-avatar.png" alt="erreur">
+            </div>
+
+            <!-- nav bar items -->
+            <div class="blured">
+                <nav class="list">
+                    <img id="close-icon" src="./sass/images/icon-close.svg" alt="erreur">
+                    <ul>
+                        <li><a href="#">Collections</a></li>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="cart-box">
+            <div>Cart</div>
+            <hr>
+            <div class="items">Your cart is empty.</div>
         </div>
 
-        <!-- nav bar items -->
-        <div class="blured">
-            <nav class="list">
-                <img id="close-icon" src="./sass/images/icon-close.svg" alt="erreur">
-                <ul>
-                    <li><a href="#">Collections</a></li>
-                    <li><a href="#">Men</a></li>
-                    <li><a href="#">Women</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        <div class="elements">
+            <div class="product">
 
-    <div id="cart-box">
-        <div>Cart</div>
-        <hr>
-        <div class="items">Your cart is empty.</div>
+                <div class="btn">
+                    <img src="./sass/images/icon-next.svg" alt="erreur" class="next">
+                    <img src="./sass/images/icon-next.svg" alt="erreur" class="previous">
+                </div>
+
+                <div class="all-product">
+
+                    <img src="./sass/images/image-product-1.jpg" alt="erreur" width="100%" class="main-img">
+                    
+                    <div class="smaller-img">
+                        <div class="small-img">
+                            <img src="./sass/images/image-product-1.jpg" alt="" width="100%" class="small selected-img">
+                        </div>
+                        <div class="small-img">
+                            <img src="./sass/images/image-product-2.jpg" alt="" width="100%" class="small">
+                        </div>
+                        <div class="small-img">
+                            <img src="./sass/images/image-product-3.jpg" alt="" width="100%" class="small">
+                        </div>
+                        <div class="small-img">
+                            <img src="./sass/images/image-product-4.jpg" alt="" width="100%" class="small">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-product">
+                <div class="company-name">sneacker company</div>
+                <div class="info">
+                    <h2>Fall Limited Edition Sneackers</h2>
+                    <p>These low-profile Sneackers are your perfect casual wear companion. featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+                </div>
+                <div class="price">
+                    <h2>&dollar;125.00 <span>50%</span></h2>
+                    <h2>&dollar;250.00</h2>
+                </div>
+                <div class="add-items">
+                    <div class="input-style">
+                        <input type="text" id="inp" class="inp">
+                        <img src="./sass/images/icon-minus.svg" alt="erreur" class="minus-icon">
+                        <img src="./sass/images/icon-plus.svg" alt="erreur" class="plus-icon">
+                    </div>
+                    <button><img src="./sass/images/icon-cart.svg" alt="erreur" class="cart-icon"> Add to cart</button>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="product">
-        <div class="btn">
-            <img src="./sass/images/icon-next.svg" alt="erreur" class="next">
-            <img src="./sass/images/icon-next.svg" alt="erreur" class="previous">
-        </div>
-        <div class="all-product">
-            <img src="./sass/images/image-product-1.jpg" alt="erreur" class="active-product">
-        </div>
-    </div>
-
-    <div class="about-product">
-        <div class="company-name">sneacker company</div>
-        <div class="info">
-            <h2>Fall Limited Edition Sneackers</h2>
-            <p>These low-profile Sneackers are your perfect casual wear companion. featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
-        </div>
-        <div class="price">
-            <h2>&dollar;125.00 <span>50%</span></h2>
-            <h2>&dollar;250.00</h2>
-        </div>
-        <div class="input-style">
-            <input type="text" id="inp" class="inp">
-            <img src="./sass/images/icon-minus.svg" alt="erreur" class="minus-icon">
-            <img src="./sass/images/icon-plus.svg" alt="erreur" class="plus-icon">
-        </div>
-        <button><img src="./sass/images/icon-cart.svg" alt="erreur" class="cart-icon"> Add to cart</button>
-    </div>
-
 
     <script src="js/main.js"></script>
 </body>
